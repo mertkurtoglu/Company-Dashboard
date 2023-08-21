@@ -8,7 +8,7 @@ const items = [
     label: "Dashboard",
     key: "dashboard",
     icon: <MailOutlined />,
-    path: "/",
+    path: "/dashboard",
   },
   {
     label: "Companies",
@@ -49,7 +49,7 @@ const HeaderNav = () => {
     localStorage.removeItem("token");
     message.success("Logout Successful");
     setTimeout(() => {
-      navigate("/login");
+      navigate("/");
     }, 1500);
   };
 

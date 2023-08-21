@@ -15,7 +15,7 @@ const Register = () => {
         if (res.status === 201) {
           message.success("Registration Successful");
           setTimeout(() => {
-            navigate("/");
+            navigate("/dashboard");
           }, 2000);
         }
       })
@@ -96,7 +96,7 @@ const Register = () => {
               Sign up
             </Button>
             <p style={{ fontSize: "16px", display: "flex", justifyContent: "center", marginTop: "15px" }}>
-              Already a member ? <a href="/login">Sign in now!</a>
+              Already a member ? <a href="/">Sign in now!</a>
             </p>
           </Form.Item>
         </Form>

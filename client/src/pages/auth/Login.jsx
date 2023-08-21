@@ -11,19 +11,19 @@ const Login = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
-      navigate("/"); // or wherever you want to redirect to
+      navigate("/dashboard"); // or wherever you want to redirect to
     }
   }, [navigate]);
 
   const onFinish = (values) => {
     axios
-      .post("http://localhost:8080/login", values)
+      .post("http://localhost:8080/", values)
       .then((res) => {
         if (res.status === 200) {
           localStorage.setItem("token", res.data.token);
           message.success("Login Successful");
           setTimeout(() => {
-            navigate("/");
+            navigate("/dashboard");
           }, 2000);
         }
       })

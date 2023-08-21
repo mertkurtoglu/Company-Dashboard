@@ -17,7 +17,7 @@ function App() {
       <div className="App" style={{ height: "100vh" }}>
         <Routes>
           {/* No layout routes */}
-          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
 
           {/* Routes with layout */}
@@ -28,7 +28,7 @@ function App() {
                 <Header />
                 <Content style={{ height: "calc(100% - 64px)", overflow: "auto" }}>
                   <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/dashboard" element={<Home />} />
                     <Route path="/company" element={<Companies />} />
                     <Route path="/product" element={<Products />} />
                   </Routes>

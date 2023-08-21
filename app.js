@@ -17,7 +17,7 @@ app.use(express.json());
 connectMongo();
 
 //Auth
-app.post("/login", Auth.login);
+app.post("/", Auth.login);
 app.post("/register", Auth.register);
 
 // Company
